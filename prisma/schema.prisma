@@ -1,0 +1,102 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model TeamMember {
+  id            String   @id @default(uuid())
+  name          String
+  role          String
+  bio           String?
+  image_url     String?
+  linkedin_url  String?
+  twitter_url   String?
+  github_url    String?
+  display_order Int      @default(0)
+  is_active     Boolean  @default(true)
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  @@map("team_members")
+}
+
+model Project {
+  id            String   @id @default(uuid())
+  title         String
+  description   String
+  category      String
+  tags          String[]
+  image_url     String?
+  link          String?
+  display_order Int      @default(0)
+  is_active     Boolean  @default(true)
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  @@map("projects")
+}
+
+model Service {
+  id            String   @id @default(uuid())
+  title         String
+  description   String
+  icon          String
+  features      String[]
+  display_order Int      @default(0)
+  is_active     Boolean  @default(true)
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  @@map("services")
+}
+
+model Stat {
+  id            String   @id @default(uuid())
+  label         String
+  value         String
+  icon          String
+  description   String?
+  display_order Int      @default(0)
+  is_active     Boolean  @default(true)
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  @@map("stats")
+}
+
+enum CertificationStatus {
+  active
+  expired
+  revoked
+}
+
+model Certification {
+  id             String              @id @default(uuid())
+  certificate_id String              @unique
+  recipient_name String
+  course_name    String
+  issue_date     DateTime
+  expiry_date    DateTime?
+  status         CertificationStatus @default(active)
+  is_active      Boolean             @default(true)
+  created_at     DateTime            @default(now())
+  updated_at     DateTime            @updatedAt
+
+  @@map("certifications")
+}
+
+model User {
+  id         String   @id @default(uuid())
+  email      String   @unique
+  password   String // Hashed
+  role       String   @default("user") // "admin" or "user"
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@map("users")
+}
