@@ -12,7 +12,6 @@ import Projects from "./pages/Projects";
 import Team from "./pages/Team";
 import Blog from "./pages/Blog";
 import Products from "./pages/Products";
-import Roadmap from "./pages/Roadmap";
 import CertificationVerify from "./pages/CertificationVerify";
 
 import NotFound from "./pages/NotFound";

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { siteData } from "@/data/siteData";
 import { Link } from "react-router-dom";
 
@@ -110,6 +110,10 @@ const HeroSection = () => {
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[900px] p-0 border-none bg-black/95 shadow-2xl">
+                <DialogTitle className="sr-only">Product Demo Video</DialogTitle>
+                <DialogDescription className="sr-only">
+                  A video demonstrating the features of our product.
+                </DialogDescription>
                 <div className="aspect-video w-full overflow-hidden rounded-lg">
                   <iframe
                     width="100%"
