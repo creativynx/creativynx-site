@@ -52,7 +52,7 @@ export const siteData = {
       line2Suffix: "",
     },
     description: "We don't just write code; we design ecosystems. From robust backend infrastructures for enterprises to career roadmaps for aspiring engineers, we build structures that last.",
-    videoUrl: "https://www.youtube.com/embed/LXb3EKWsInQ?autoplay=1&rel=0",
+    videoUrl: "",
     primaryCta: "Start Your Project",
     secondaryCta: "How We Work?",
     trustedBy: ["TechCorp", "InnovateLabs", "FutureDev", "CloudScale", "DataFlow"],
