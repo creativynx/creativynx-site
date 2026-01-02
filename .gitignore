@@ -46,6 +46,12 @@ jspm_packages/
 docs/
 docs/*
 
+server/
+server/*
+
+prisma/
+prisma/*
+
 # TypeScript v1 declaration files
 typings/
 
