@@ -54,7 +54,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/roadmap" element={<Roadmap />} />
+          <Route path="/roadmap" element={<NotFound />} />
           <Route path="/verify-certificate" element={<CertificationVerify />} />
 
 
