@@ -115,15 +115,27 @@ const HeroSection = () => {
                   A video demonstrating the features of our product.
                 </DialogDescription>
                 <div className="aspect-video w-full overflow-hidden rounded-lg">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={hero.videoUrl}
-                    title="Demo Video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
+                  {hero.videoUrl ? (
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={hero.videoUrl}
+                      title="Demo Video"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex flex-col items-center justify-center bg-zinc-900 border border-white/10 p-8 text-center">
+                      <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                        <Play className="h-8 w-8 text-primary opacity-50" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-2">Video Coming Soon</h3>
+                      <p className="text-zinc-400 max-w-md">
+                        We are currently crafting a detailed walkthrough of our capabilities. Stay tuned for updates.
+                      </p>
+                    </div>
+                  )}
                 </div>
               </DialogContent>
             </Dialog>

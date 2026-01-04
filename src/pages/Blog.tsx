@@ -81,49 +81,52 @@ const Blog = () => {
 
           {/* Articles Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {regularArticles.map((article, index) => (
-              <article
-                key={article.title}
-                className="glass-card rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300 group opacity-0 animate-fade-in-up h-full flex flex-col"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <Link to={`/blog/${article.slug}`} className="block flex-grow">
-                  <div className="h-48 overflow-hidden">
-                    <img
-                      src={article.image}
-                      alt={article.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-6 flex flex-col h-full">
-                    <span className="px-2 py-1 rounded-md bg-primary/10 text-primary text-xs font-medium w-fit">
-                      {article.category}
-                    </span>
-                    <h3 className="text-lg font-bold font-display text-foreground mt-3 mb-2 group-hover:text-primary transition-colors">
-                      {article.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{article.excerpt}</p>
-                    <div className="flex items-center justify-between text-xs text-muted-foreground mt-auto pt-4">
-                      <span>{article.author}</span>
-                      <span>{article.readTime}</span>
+            {
+              regularArticles.length > 0 ? (
+                regularArticles.map((article, index) => (
+                  <article
+                    key={article.title}
+                    className="glass-card rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-300 group opacity-0 animate-fade-in-up h-full flex flex-col"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <Link to={`/blog/${article.slug}`} className="block flex-grow">
+                      <div className="h-48 overflow-hidden">
+                        <img
+                          src={article.image}
+                          alt={article.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                      <div className="p-6 flex flex-col h-full">
+                        <span className="px-2 py-1 rounded-md bg-primary/10 text-primary text-xs font-medium w-fit">
+                          {article.category}
+                        </span>
+                        <h3 className="text-lg font-bold font-display text-foreground mt-3 mb-2 group-hover:text-primary transition-colors">
+                          {article.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{article.excerpt}</p>
+                        <div className="flex items-center justify-between text-xs text-muted-foreground mt-auto pt-4">
+                          <span>{article.author}</span>
+                          <span>{article.readTime}</span>
+                        </div>
+                      </div>
+                    </Link>
+                  </article>
+                ))
+              ) :
+                (
+                  <div className="col-span-3 text-center py-24 bg-card/50 rounded-3xl border border-border/50 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                    <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary">
+                      <BookOpen className="w-8 h-8" />
                     </div>
+                    <h3 className="text-2xl font-bold font-display mb-2">Thoughts Brewing</h3>
+                    <p className="text-muted-foreground max-w-md mx-auto">
+                      Our experts are crafting deep dives and tutorials. Stay tuned for the first drop.
+                    </p>
                   </div>
-                </Link>
-              </article>
-            ))}
+                )
+            }
           </div>
-
-          {articles.length === 0 && (
-            <div className="text-center py-24 bg-card/50 rounded-3xl border border-border/50 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary">
-                <BookOpen className="w-8 h-8" />
-              </div>
-              <h3 className="text-2xl font-bold font-display mb-2">Thoughts Brewing</h3>
-              <p className="text-muted-foreground max-w-md mx-auto">
-                Our experts are crafting deep dives and tutorials. Stay tuned for the first drop.
-              </p>
-            </div>
-          )}
         </div>
       </main>
       <FooterCTA />

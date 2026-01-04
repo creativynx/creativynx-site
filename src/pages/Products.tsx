@@ -7,39 +7,13 @@ const Products = () => {
   const products = [
     {
       icon: Zap,
-      name: "CreaX Engine",
+      name: "CTX Engine",
       tagline: "AI-Powered Development Platform",
       description: "Accelerate your development workflow with intelligent code suggestions, automated testing, and seamless deployment.",
       features: ["Smart Code Completion", "Automated Testing", "One-Click Deploy", "Real-time Collaboration"],
       color: "from-blue-500 to-indigo-500",
-      price: "$99/mo",
-    },
-    {
-      icon: Shield,
-      name: "CreaX Guard",
-      tagline: "Enterprise Security Suite",
-      description: "Comprehensive security solution with real-time threat detection, compliance monitoring, and automated remediation.",
-      features: ["Threat Detection", "Compliance Monitoring", "Vulnerability Scanning", "Incident Response"],
-      color: "from-teal-500 to-emerald-500",
-      price: "$199/mo",
-    },
-    {
-      icon: BarChart3,
-      name: "CreaX Analytics",
-      tagline: "Business Intelligence Platform",
-      description: "Transform your data into actionable insights with advanced analytics, custom dashboards, and predictive modeling.",
-      features: ["Custom Dashboards", "Predictive Analytics", "Data Visualization", "Report Automation"],
-      color: "from-violet-500 to-purple-500",
-      price: "$149/mo",
-    },
-    {
-      icon: Layers,
-      name: "CreaX Cloud",
-      tagline: "Scalable Infrastructure",
-      description: "Deploy and scale your applications effortlessly with our cloud-native infrastructure and managed services.",
-      features: ["Auto-Scaling", "Global CDN", "Managed Databases", "24/7 Support"],
-      color: "from-cyan-500 to-sky-500",
-      price: "$79/mo",
+      price: "₹499/mo",
+      commingSoon: true,
     },
   ];
 
@@ -75,13 +49,13 @@ const Products = () => {
                   </div>
                   <span className="text-2xl font-bold font-display text-primary">{product.price}</span>
                 </div>
-                
+
                 <h3 className="text-2xl font-bold font-display text-foreground mb-1">
                   {product.name}
                 </h3>
                 <p className="text-primary font-medium mb-4">{product.tagline}</p>
                 <p className="text-muted-foreground mb-6">{product.description}</p>
-                
+
                 <div className="space-y-3 mb-8">
                   {product.features.map((feature) => (
                     <div key={feature} className="flex items-center gap-3">
@@ -92,11 +66,23 @@ const Products = () => {
                     </div>
                   ))}
                 </div>
-                
-                <Button className="w-full bg-gradient-primary hover:opacity-90 text-primary-foreground group">
-                  Get Started
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+
+                {
+                  product.commingSoon ? (
+                    <Button
+                      disabled
+                      className="w-full bg-gradient-primary hover:opacity-90 text-primary-foreground group"
+                    >
+                      Coming Soon
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  ) : (
+                    <Button className="w-full bg-gradient-primary hover:opacity-90 text-primary-foreground group">
+                      Get Started
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  )
+                }
               </div>
             ))}
           </div>

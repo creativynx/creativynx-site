@@ -91,8 +91,8 @@ const FooterCTA = () => {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 pb-12 border-b border-border">
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
-              <a href="#home" className="flex items-center gap-2 mb-4">
-                <img src={Logo} alt="Logo" className="w-full px-12 md:p-0 md:w-32" />
+              <a href="#home" className="flex items-center justify-center md:justify-start gap-2 mb-6">
+                <img src={Logo} alt="Logo" className="w-64 px-12 md:p-0 md:w-32" />
               </a>
 
               <div className="flex items-center justify-center md:justify-start gap-3 ">
@@ -144,7 +144,7 @@ const FooterCTA = () => {
               to={footer.credit.company.link}
               className="text-primary hover:underline tracking-wide"
             >
-              <span className="text-primary">{footer.credit.company.name}</span><span className="text-muted-foreground">{footer.credit.company.suffix}</span>
+              <span className="text-muted-foreground">{footer.credit.company.name}</span><span className="text-primary">{footer.credit.company.suffix}</span>
             </Link>
           </p>
         </div>

@@ -101,7 +101,7 @@ const Contact = () => {
                                             >
                                                 {/* Simple icon mapping, or could use lucide icons map if needed */}
                                                 <span className="text-sm">
-                                                    <social.icon />
+                                                    {social.icon}
                                                 </span>
                                             </a>
                                         ))}

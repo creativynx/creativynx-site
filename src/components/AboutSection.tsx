@@ -74,10 +74,10 @@ const AboutSection = () => {
         </div> */}
 
         {/* Main content - Two columns */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
           {/* Left - Mission Statement */}
-          <ScrollReveal direction="left">
-            <div className="bg-card rounded-3xl p-8 md:p-10 border border-border relative overflow-hidden">
+          <ScrollReveal direction="left" className="h-full">
+            <div className="bg-card rounded-3xl p-8 md:py-12 border border-border relative overflow-hidden h-full flex flex-col">
               {/* Decorative gradient */}
               <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-primary/10 to-transparent rounded-bl-full" />
 
@@ -103,7 +103,7 @@ const AboutSection = () => {
                 </div>
 
                 {/* Quick stats row */}
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-3 gap-4 mt-auto">
                   {about.quickStats.map((item) => (
                     <div key={item.label} className="text-center">
                       <div className="text-2xl font-bold font-display text-gradient">{item.value}</div>
@@ -116,7 +116,7 @@ const AboutSection = () => {
           </ScrollReveal>
 
           {/* Right - Highlights */}
-          <div className="space-y-4">
+          <div className="flex flex-col h-full space-y-4">
             {about.highlights.map((item, index) => {
               const IconComponent = iconMap[item.icon];
               return (
@@ -132,10 +132,10 @@ const AboutSection = () => {
               );
             })}
 
-            <ScrollReveal delay={500} direction="up">
-              <div className="pt-6">
+            <ScrollReveal delay={500} direction="up" className="mt-auto">
+              <div className="pt-6 md:pt-1">
                 <Link to="/about">
-                  <Button className="bg-gradient-primary hover:opacity-90 text-primary-foreground group h-14 px-8 text-base glow w-full sm:w-auto">
+                  <Button className="bg-gradient-primary hover:opacity-90 text-primary-foreground group h-14 px-8 text-base glow w-full">
                     Discover Our Story
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>

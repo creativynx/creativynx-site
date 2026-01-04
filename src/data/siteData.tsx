@@ -1,11 +1,12 @@
 // Centralized site data - All content should be managed from this file
-// Updated for production
-
 
 import { platform } from "os";
 
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+
+// Career icons
+import { FaBriefcase, FaClock, FaGlobe, FaUsers } from "react-icons/fa6";
 
 export const siteData = {
   // Company Information
@@ -44,7 +45,7 @@ export const siteData = {
 
   // Hero Section
   hero: {
-    badge: "Innovation • Acceleration • Evolution",
+    badge: "Innovation  •  Acceleration  •  Evolution",
     headline: {
       line1: "Architecting the ",
       line2Prefix: "",
@@ -71,19 +72,19 @@ export const siteData = {
   stats: [
     {
       icon: "Rocket",
-      value: "50+",
+      value: "10+",
       label: "Projects Shipped",
       description: "Global Clients",
     },
     {
       icon: "Target",
-      value: "98%",
+      value: "20%",
       label: "Job Placement",
       description: "Accelerator Grads",
     },
     {
       icon: "TrendingDown",
-      value: "30%",
+      value: "10%",
       label: "Cost Reduction",
       description: "For Agency Partners",
     },
@@ -248,7 +249,7 @@ export const siteData = {
         name: "Karthick J",
         role: "Head of Operations",
         bio: "Strategic operator ensuring seamless delivery and client success.",
-        image: "",
+        image: "https://media.licdn.com/dms/image/v2/D5603AQFV2olejsu8DA/profile-displayphoto-scale_400_400/B56Zt.o3gfHkAg-/0/1767356202791?e=1769040000&v=beta&t=lEKcousLnlEC8-gXiBrf3uFcCwhfiG57MS8YwefV8to",
         social: {
           linkedin: "#",
           twitter: "#",
@@ -279,36 +280,36 @@ export const siteData = {
     },
     description: "We are always looking for exceptional talent to join our mission. If you are passionate about technology and innovation, we want to hear from you.",
     benefits: [
-      { title: "Remote-First", description: "Work from anywhere in the world.", icon: "Globe" },
-      { title: "Competitive Salary", description: "Top-tier compensation packages.", icon: "Banknote" },
-      { title: "Learning Budget", description: "Annual allowance for courses and conferences.", icon: "BookOpen" },
-      { title: "Health & Wellness", description: "Comprehensive health insurance and wellness programs.", icon: "Heart" },
+      {
+        title: "Flexible working hours",
+        description: "We offer flexible working hours to our employees to ensure they have the flexibility to balance their work and personal lives.",
+        icon: FaClock
+      },
+      {
+        title: "Opportunities for growth",
+        description: "We offer opportunities for growth and development to our employees to ensure they have the tools and resources they need to succeed.",
+        icon: FaGlobe
+      },
+      {
+        title: "Work Environment",
+        description: "We believe that a supportive and collaborative work environment is essential to the success of our company.",
+        icon: FaUsers
+      },
+      {
+        title: "Best in Industry",
+        description: "We work with the best in the industry to ensure we are always at the forefront of the latest technology and trends.",
+        icon: FaBriefcase
+      }
     ],
     positions: [
-      {
-        id: "full-stack-engineer",
-        title: "Senior Full Stack Engineer",
-        department: "Engineering",
-        location: "Remote / Hybrid",
-        type: "Full-time",
-        description: "We are looking for a Senior Full Stack Engineer to help us build scalable solutions for our enterprise clients.",
-      },
-      {
-        id: "product-designer",
-        title: "Product Designer",
-        department: "Design",
-        location: "Remote",
-        type: "Full-time",
-        description: "Join our design team to craft intuitive and beautiful user experiences.",
-      },
-      {
-        id: "marketing-manager",
-        title: "Growth Marketing Manager",
-        department: "Marketing",
-        location: "Remote",
-        type: "Full-time",
-        description: "Drive our growth strategy and help us reach more innovators worldwide.",
-      },
+      // {
+      //   id: "full-stack-engineer",
+      //   title: "Senior Full Stack Engineer",
+      //   department: "Engineering",
+      //   location: "Remote / Hybrid",
+      //   type: "Full-time",
+      //   description: "We are looking for a Senior Full Stack Engineer to help us build scalable solutions for our enterprise clients.",
+      // },
     ]
   },
 
@@ -321,20 +322,14 @@ export const siteData = {
     },
     description: "Latest updates, announcements, and media resources from CreativynX.",
     news: [
-      {
-        date: "December 15, 2024",
-        title: "CreativynX launches new Accelerator Program",
-        source: "TechDaily",
-        link: "#",
-        summary: "We are thrilled to announce the launch of our new developer accelerator program, designed to bridge the gap between academic learning and industry needs."
-      },
-      {
-        date: "November 20, 2024",
-        title: "CreativynX Partners with TechCorp for AI Innovation",
-        source: "Innovation Weekly",
-        link: "#",
-        summary: "A strategic partnership to bring cutting-edge AI solutions to the enterprise market."
-      }
+      // {
+      //   date: "December 15, 2024",
+      //   title: "CreativynX launches new Accelerator Program",
+      //   source: "TechDaily",
+      //   link: "#",
+      //   summary: "We are thrilled to announce the launch of our new developer accelerator program, designed to bridge the gap between academic learning and industry needs."
+      // },
+
     ],
     mediaKit: {
       description: "Download our official brand assets, including logos, color palettes, and leadership bios.",
@@ -345,132 +340,132 @@ export const siteData = {
   // Blog Section
   blog: {
     articles: [
-      {
-        slug: "future-of-ai-enterprise",
-        title: "The Future of AI in Enterprise Software",
-        excerpt: "Exploring how artificial intelligence is reshaping business operations and decision-making processes.",
-        category: "AI/ML",
-        author: "Sarah Johnson",
-        date: "Dec 1, 2024",
-        readTime: "8 min read",
-        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
-        featured: true,
-        content: `
-          <p>Artificial Intelligence (AI) is no longer just a buzzword; it's a fundamental shift in how enterprises operate. From predictive analytics to automated customer service, AI is embedding itself into the core of business software.</p>
-          <h2>The Shift to Intelligent Automation</h2>
-          <p>Enterprises are moving beyond simple automation to intelligent automation. This means systems that can learn, adapt, and make decisions without constant human intervention.</p>
-          <p>Key areas of impact include:</p>
-          <ul>
-            <li><strong>Decision Support:</strong> AI models analyzing vast datasets to provide actionable insights.</li>
-            <li><strong>Customer Experience:</strong> Hyper-personalized user journeys driven by real-time behavior analysis.</li>
-            <li><strong>Operational Efficiency:</strong> Predictive maintenance in manufacturing and logistics.</li>
-          </ul>
-          <h2>Challenges and Opportunities</h2>
-          <p>While the potential is unrivaled, implementing AI comes with challenges such as data privacy, ethical considerations, and the need for new skill sets. However, companies that navigate these successfully will define the next decade of industry.</p>
-        `
-      },
-      {
-        slug: "scalable-microservices",
-        title: "Building Scalable Microservices Architecture",
-        excerpt: "Best practices for designing and implementing microservices that scale with your business.",
-        category: "Engineering",
-        author: "Emily Rodriguez",
-        date: "Nov 28, 2024",
-        readTime: "6 min read",
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop",
-        featured: false,
-        content: `
-          <p>Microservices have become the de facto standard for building complex, scalable applications. But breaking a monolith into services is just the beginning.</p>
-          <h2>Core Principles</h2>
-          <p>To succeed with microservices, you need to adhere to key principles:</p>
-          <ul>
-            <li><strong>Loose Coupling:</strong> Services should be independent and communicate via well-defined APIs.</li>
-            <li><strong>Database per Service:</strong> Avoid shared databases to prevent tight coupling.</li>
-            <li><strong>Fault Isolation:</strong> Ensure that if one service fails, it doesn't cascade to the entire system.</li>
-          </ul>
-          <h2>Infrastructure as Code</h2>
-          <p>Managing dozens of services requires robust infrastructure automation. Tools like Kubernetes and Terraform are essential for orchestration and deployment.</p>
-        `
-      },
-      {
-        slug: "design-systems-scale",
-        title: "Design Systems That Scale",
-        excerpt: "How to create and maintain design systems that grow with your product and team.",
-        category: "Design",
-        author: "Michael Park",
-        date: "Nov 25, 2024",
-        readTime: "5 min read",
-        image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-        featured: false,
-        content: `
-          <p>A design system is more than a UI kit; it's a shared language for your product team. It bridges the gap between design and engineering.</p>
-          <h2>Components of a Design System</h2>
-          <p>A robust system includes:</p>
-          <ul>
-            <li><strong>Design Tokens:</strong> The atomic values (colors, spacing, typography).</li>
-            <li><strong>Component Library:</strong> Reusable UI elements (buttons, inputs, cards).</li>
-            <li><strong>Usage Guidelines:</strong> Documentation on when and how to use each component.</li>
-          </ul>
-        `
-      },
-      {
-        slug: "junior-to-senior-dev",
-        title: "From Junior to Senior: A Developer's Journey",
-        excerpt: "Key milestones and learnings from our accelerator program graduates.",
-        category: "Career",
-        author: "David Kim",
-        date: "Nov 22, 2024",
-        readTime: "7 min read",
-        image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop",
-        featured: false,
-        content: `
-          <p>The path from writing your first line of code to architecting complex systems is a journey of continuous learning. At CreativynX, we've guided hundreds of developers through this transition.</p>
-          <h2>The Mindset Shift</h2>
-          <p>Junior developers focus on "How do I solve this?"; Senior developers ask "Should I solve this, and what are the trade-offs?".</p>
-          <p>Focus on:</p>
-          <ul>
-            <li>Writing maintainable, readable code over clever one-liners.</li>
-            <li>Understanding the business context of your work.</li>
-            <li>Mentoring others and improved communication.</li>
-          </ul>
-        `
-      },
-      {
-        slug: "rise-of-edge-computing",
-        title: "The Rise of Edge Computing",
-        excerpt: "Understanding the shift towards distributed computing and its implications.",
-        category: "Technology",
-        author: "Alex Chen",
-        date: "Nov 18, 2024",
-        readTime: "6 min read",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop",
-        featured: false,
-        content: `
-          <p>Edge computing is bringing computation and data storage closer to the location where it is needed.</p>
-          <h2>Why Edge?</h2>
-          <p>With the explosion of IoT devices and the need for real-time processing, sending everything to a central cloud is becoming inefficient due to latency and bandwidth costs.</p>
-        `
-      },
-      {
-        slug: "securing-modern-web-apps",
-        title: "Securing Modern Web Applications",
-        excerpt: "Essential security practices every developer should implement in 2024.",
-        category: "Security",
-        author: "Emily Rodriguez",
-        date: "Nov 15, 2024",
-        readTime: "9 min read",
-        image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=400&fit=crop",
-        featured: false,
-        content: `
-          <p>Security cannot be an afterthought. In the modern web landscape, vulnerabilities are exploited in minutes.</p>
-          <h2>Top Priorities</h2>
-          <ul>
-            <li><strong>Dependency Management:</strong> Regularly audit your npm packages.</li>
-            <li><strong>Input Validation:</strong> Never trust user input. Sanitize everything.</li>
-            <li><strong>Authentication:</strong> Implement robust auth flows like OAuth2 and OIDC.</li>
-          </ul>
-        `
-      },
+      // {
+      //   slug: "future-of-ai-enterprise",
+      //   title: "The Future of AI in Enterprise Software",
+      //   excerpt: "Exploring how artificial intelligence is reshaping business operations and decision-making processes.",
+      //   category: "AI/ML",
+      //   author: "Sarah Johnson",
+      //   date: "Dec 1, 2024",
+      //   readTime: "8 min read",
+      //   image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
+      //   featured: true,
+      //   content: `
+      //     <p>Artificial Intelligence (AI) is no longer just a buzzword; it's a fundamental shift in how enterprises operate. From predictive analytics to automated customer service, AI is embedding itself into the core of business software.</p>
+      //     <h2>The Shift to Intelligent Automation</h2>
+      //     <p>Enterprises are moving beyond simple automation to intelligent automation. This means systems that can learn, adapt, and make decisions without constant human intervention.</p>
+      //     <p>Key areas of impact include:</p>
+      //     <ul>
+      //       <li><strong>Decision Support:</strong> AI models analyzing vast datasets to provide actionable insights.</li>
+      //       <li><strong>Customer Experience:</strong> Hyper-personalized user journeys driven by real-time behavior analysis.</li>
+      //       <li><strong>Operational Efficiency:</strong> Predictive maintenance in manufacturing and logistics.</li>
+      //     </ul>
+      //     <h2>Challenges and Opportunities</h2>
+      //     <p>While the potential is unrivaled, implementing AI comes with challenges such as data privacy, ethical considerations, and the need for new skill sets. However, companies that navigate these successfully will define the next decade of industry.</p>
+      //   `
+      // },
+      // {
+      //   slug: "scalable-microservices",
+      //   title: "Building Scalable Microservices Architecture",
+      //   excerpt: "Best practices for designing and implementing microservices that scale with your business.",
+      //   category: "Engineering",
+      //   author: "Emily Rodriguez",
+      //   date: "Nov 28, 2024",
+      //   readTime: "6 min read",
+      //   image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop",
+      //   featured: false,
+      //   content: `
+      //     <p>Microservices have become the de facto standard for building complex, scalable applications. But breaking a monolith into services is just the beginning.</p>
+      //     <h2>Core Principles</h2>
+      //     <p>To succeed with microservices, you need to adhere to key principles:</p>
+      //     <ul>
+      //       <li><strong>Loose Coupling:</strong> Services should be independent and communicate via well-defined APIs.</li>
+      //       <li><strong>Database per Service:</strong> Avoid shared databases to prevent tight coupling.</li>
+      //       <li><strong>Fault Isolation:</strong> Ensure that if one service fails, it doesn't cascade to the entire system.</li>
+      //     </ul>
+      //     <h2>Infrastructure as Code</h2>
+      //     <p>Managing dozens of services requires robust infrastructure automation. Tools like Kubernetes and Terraform are essential for orchestration and deployment.</p>
+      //   `
+      // },
+      // {
+      //   slug: "design-systems-scale",
+      //   title: "Design Systems That Scale",
+      //   excerpt: "How to create and maintain design systems that grow with your product and team.",
+      //   category: "Design",
+      //   author: "Michael Park",
+      //   date: "Nov 25, 2024",
+      //   readTime: "5 min read",
+      //   image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
+      //   featured: false,
+      //   content: `
+      //     <p>A design system is more than a UI kit; it's a shared language for your product team. It bridges the gap between design and engineering.</p>
+      //     <h2>Components of a Design System</h2>
+      //     <p>A robust system includes:</p>
+      //     <ul>
+      //       <li><strong>Design Tokens:</strong> The atomic values (colors, spacing, typography).</li>
+      //       <li><strong>Component Library:</strong> Reusable UI elements (buttons, inputs, cards).</li>
+      //       <li><strong>Usage Guidelines:</strong> Documentation on when and how to use each component.</li>
+      //     </ul>
+      //   `
+      // },
+      // {
+      //   slug: "junior-to-senior-dev",
+      //   title: "From Junior to Senior: A Developer's Journey",
+      //   excerpt: "Key milestones and learnings from our accelerator program graduates.",
+      //   category: "Career",
+      //   author: "David Kim",
+      //   date: "Nov 22, 2024",
+      //   readTime: "7 min read",
+      //   image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop",
+      //   featured: false,
+      //   content: `
+      //     <p>The path from writing your first line of code to architecting complex systems is a journey of continuous learning. At CreativynX, we've guided hundreds of developers through this transition.</p>
+      //     <h2>The Mindset Shift</h2>
+      //     <p>Junior developers focus on "How do I solve this?"; Senior developers ask "Should I solve this, and what are the trade-offs?".</p>
+      //     <p>Focus on:</p>
+      //     <ul>
+      //       <li>Writing maintainable, readable code over clever one-liners.</li>
+      //       <li>Understanding the business context of your work.</li>
+      //       <li>Mentoring others and improved communication.</li>
+      //     </ul>
+      //   `
+      // },
+      // {
+      //   slug: "rise-of-edge-computing",
+      //   title: "The Rise of Edge Computing",
+      //   excerpt: "Understanding the shift towards distributed computing and its implications.",
+      //   category: "Technology",
+      //   author: "Alex Chen",
+      //   date: "Nov 18, 2024",
+      //   readTime: "6 min read",
+      //   image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop",
+      //   featured: false,
+      //   content: `
+      //     <p>Edge computing is bringing computation and data storage closer to the location where it is needed.</p>
+      //     <h2>Why Edge?</h2>
+      //     <p>With the explosion of IoT devices and the need for real-time processing, sending everything to a central cloud is becoming inefficient due to latency and bandwidth costs.</p>
+      //   `
+      // },
+      // {
+      //   slug: "securing-modern-web-apps",
+      //   title: "Securing Modern Web Applications",
+      //   excerpt: "Essential security practices every developer should implement in 2024.",
+      //   category: "Security",
+      //   author: "Emily Rodriguez",
+      //   date: "Nov 15, 2024",
+      //   readTime: "9 min read",
+      //   image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&h=400&fit=crop",
+      //   featured: false,
+      //   content: `
+      //     <p>Security cannot be an afterthought. In the modern web landscape, vulnerabilities are exploited in minutes.</p>
+      //     <h2>Top Priorities</h2>
+      //     <ul>
+      //       <li><strong>Dependency Management:</strong> Regularly audit your npm packages.</li>
+      //       <li><strong>Input Validation:</strong> Never trust user input. Sanitize everything.</li>
+      //       <li><strong>Authentication:</strong> Implement robust auth flows like OAuth2 and OIDC.</li>
+      //     </ul>
+      //   `
+      // },
     ]
   },
 

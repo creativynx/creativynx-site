@@ -49,7 +49,7 @@ const Careers = () => {
                             <h2 className="text-3xl font-bold font-display text-center mb-16">Why Join CreativynX?</h2>
                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {careers.benefits.map((benefit, index) => {
-                                    const IconComponent = iconMap[benefit.icon];
+                                    const IconComponent = benefit.icon;
                                     return (
                                         <div key={index} className="bg-card p-6 rounded-2xl border border-border hover:border-primary/30 transition-colors text-center">
                                             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 text-primary">
